@@ -92,8 +92,9 @@ void ULoginMenu::OnLogInResponse(FHttpRequestPtr Request, FHttpResponsePtr Respo
 			}
 			else
 			{
-				/*FString IdToken = JsonObject->GetObjectField("tokens")->GetStringField("IdToken");
-				StartSessionRequest(IdToken);*/
+				FString IDTokenL = JsonObject->GetObjectField("AuthenticationResult")->GetStringField("IdToken");
+				UE_LOG(LogTemp, Warning, TEXT("ID Token -> %s"), *IDTokenL);
+				//StartSessionRequest(IdToken);
 				UGameplayStatics::OpenLevel(this, FName("MainMenu"));
 			}
 		}
