@@ -12,7 +12,7 @@ ULoginMenu::ULoginMenu(const FObjectInitializer& ObjectInitializer) : Super(Obje
 	HttpModule = &FHttpModule::Get();
 
 
-	APIGatewayEndpoint = FString("https://0gkcjacqii.execute-api.ap-south-1.amazonaws.com/TestAPIGateWay");
+	APIGatewayEndpoint = FString("https://v9dnqw7zbh.execute-api.us-east-1.amazonaws.com/Prod");
 
 	LoginURI = FString("/login");
 	StartSessionURI = FString("/startsession");
